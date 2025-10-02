@@ -1,13 +1,12 @@
-train: ../train/images
-val: ../valid/images
-test: ../test/images
+train: ./datasets/train/images
+val: ./datasets/valid/images
 
-nc: 26
-names: ['0', '1', '2', '3', '4', 'Glass', 'Gloves', 'Goggles', 'Helmet', 'No-Helmet', 'No-Vest', 'Person', 'Reflective-Vest', 'Safety-Boot', 'Safety-Vest', 'Vest', 'Yelek', 'helmet', 'no helmet', 'no vest', 'no_helmet', 'no_vest', 'protective_suit', 'safety vest - v1 2023-11-19 5-12pm', 'vest', 'worker']
+# 类别数量 (我们改革后的)
+nc: 4
 
-roboflow:
-  workspace: my-workspace-c63k0
-  project: construction-safety-n0gkb
-  version: 2
-  license: CC BY 4.0
-  url: https://universe.roboflow.com/my-workspace-c63k0/construction-safety-n0gkb/dataset/2
+# 类别名称 (顺序必须和你的新ID对应)
+names:
+  - person      # ID: 0
+  - helmet      # ID: 1
+  - vest        # ID: 2
+  - no-helmet   # ID: 3

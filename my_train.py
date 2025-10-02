@@ -19,6 +19,7 @@ if __name__ == '__main__':
     # 2. 调用模型的.train()方法，开始训练。
     #    这里，我们把你之前在命令行里的所有参数，都作为函数的参数传进去。
     results = model.train(
+
         data='data.yaml',  # 指定你的数据集配置文件
         epochs=100,  # 指定训练的总轮次
         imgsz=640,  # 指定训练的图片尺寸
@@ -37,7 +38,7 @@ if __name__ == '__main__':
 
         # (5) 给这次实验起个名字，方便区分
         project='runs/detect',  # 结果都保存在这个项目文件夹下
-        name='experiment_v2'
+        name='experiment_v4_balanced_data',
     )
 
     # 3. (可选) 打印一条信息，告诉我们训练完成了

@@ -1,0 +1,22 @@
+# 旧ID -> 新ID 的映射规则
+# 注意：你需要根据data.yaml里的顺序，来确定旧ID
+label_map = {
+    8: 1,  # 'Helmet' -> 1 ('helmet')
+    17: 1, # 'helmet' -> 1 ('helmet')
+    
+    9: 3,  # 'No-Helmet' -> 3 ('no-helmet')
+    18: 3, # 'no helmet' -> 3 ('no-helmet')
+    20: 3, # 'no_helmet' -> 3 ('no-helmet')
+
+    14: 2, # 'Safety-Vest' -> 2 ('vest')
+    12: 2, # 'Reflective-Vest' -> 2 ('vest')
+    24: 2, # 'vest' -> 2 ('vest')
+    15: 2, # 'Vest' -> 2 ('vest')
+    16: 2, # 'Yelek' -> 2 ('vest')
+    23: 2, # 'safety vest - v1...' -> 2 ('vest')
+
+    11: 0, # 'Person' -> 0 ('person')
+    25: 0, # 'worker' -> 0 ('person')
+    
+    # 其他所有我们不关心的旧ID，都将被忽略
+}
